@@ -1,5 +1,4 @@
 /*  your css code here. If applicable */
-/*  your css code here. If applicable */
 .container {
   display: flex;
   justify-content: center;
@@ -33,6 +32,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
   width: 100%;
   padding: 10px;
@@ -42,8 +42,8 @@
 }
 
 .panel.active {
-  width: 600px;
- 
+  width: 400px;
+  height: 400px;
 }
 
 .panel.active img {
@@ -52,4 +52,12 @@
 
 .panel.active .img-text {
   opacity: 1;
+}
+
+.panel:not(.active) {
+  filter: grayscale(100%);
+}
+
+.panel:not(.active) img {
+  filter: grayscale(0%);
 }
